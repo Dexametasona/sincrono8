@@ -1,5 +1,26 @@
 <h1>LOGIN</h1>
-<div>
-  <label>User</label>
-  <input type="text" placeholder="name">
+<div class="my-3">
+  <label>User: </label>
+  <input type="text" placeholder="name" class="form-control mx-2" #name>
 </div>
+<div class="mb-3">
+  <label>Passsword: </label>
+  <input type="text" placeholder="password" class="form-control mx-2" #pass>
+</div>
+<div class="mb-3">
+  <button class="btn btn-warning" (click)="validar()">LOGIN</button>
+</div>
+
+<div *ngIf="name.value=='angular' && pass.value=='123456'; else error">
+  <p>Bienvenidos a angular</p>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+  <ng-template #error>
+    <p>
+      credenciales incorrectas intentelo de nuevo
+    </p>
+  </ng-template>
