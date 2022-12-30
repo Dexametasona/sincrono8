@@ -13,10 +13,8 @@
 
 <div *ngIf="name.value=='angular' && pass.value=='123456'; else error">
   <p>Bienvenidos a angular</p>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Support</a></li>
-    <li><a href="#">Contact</a></li>
+  <ul *ngFor="let x of nav">
+    <li><a href="#">{{x}}</a></li>
   </ul>
 </div>
   <ng-template #error>
