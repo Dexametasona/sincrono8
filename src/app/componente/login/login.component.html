@@ -1,14 +1,14 @@
 <h1>LOGIN</h1>
 <div class="my-3">
   <label>User: </label>
-  <input type="text" placeholder="name" class="form-control mx-2" #name>
+  <input type="text" placeholder="name" class="form-control mx-2 w-75" #name>
 </div>
 <div class="mb-3">
   <label>Passsword: </label>
-  <input type="text" placeholder="password" class="form-control mx-2" #pass>
+  <input type="text" placeholder="password" class="form-control mx-2 w-75" #pass>
 </div>
 <div class="mb-3">
-  <button class="btn btn-warning" (click)="validar()">LOGIN</button>
+  <button class="btn btn-outline-primary mx-3" (click)="validar()">LOGIN</button>
 </div>
 
 <div *ngIf="name.value=='angular' && pass.value=='123456'; else error">
@@ -20,7 +20,7 @@
   </ul>
 </div>
   <ng-template #error>
-    <p>
-      credenciales incorrectas intentelo de nuevo
+    <p id="fail">
+      Credenciales incorrectas intentelo de nuevo
     </p>
   </ng-template>
